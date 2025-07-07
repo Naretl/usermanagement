@@ -4,18 +4,18 @@
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 {% endblock %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
-<div class="form-wrapper register-page">
-  <h2 class="form-title">Create an Account</h2>
+<div class="form-wrapper login-page">
+  <h2 class="form-title">Welcome Back</h2>
   <form method="post" class="auth-form">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn">Register</button>
+    <button type="submit" class="btn">Login</button>
   </form>
-  <p class="alt-link">Already have an account?
-    <a href="{% url 'login' %}">Login here</a>
+  <p class="alt-link">Don’t have an account?
+    <a href="{% url 'register' %}">Register here</a>
   </p>
 </div>
 {% endblock %}

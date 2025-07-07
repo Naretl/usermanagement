@@ -1,0 +1,26 @@
+/* Login/Register Page Specific Styling */
+.register-page,
+.login-page {
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 85, 170, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0055aa;
+}
+
+.alt-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.alt-link a {
+  color: #0055aa;
+  text-decoration: underline;
+}

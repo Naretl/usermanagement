@@ -1,0 +1,102 @@
+/* Base Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+/* Flash Messages */
+.messages {
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.alert {
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alert.success { background-color: #d4edda; color: #155724; }
+.alert.error { background-color: #f8d7da; color: #721c24; }
+.alert.info { background-color: #d1ecf1; color: #0c5460; }
+.alert.warning { background-color: #fff3cd; color: #856404; }
+
+/* Buttons */
+.btn {
+  background-color: #0055aa;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+}
+
+.btn:hover {
+  background-color: #003f7a;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #0055aa;
+  color: #0055aa;
+}
+
+/* Form Layouts */
+.form-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.auth-form p {
+  margin-bottom: 15px;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Profile Page */
+.profile-page {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-details p {
+  margin: 10px 0;
+  font-size: 18px;
+}
