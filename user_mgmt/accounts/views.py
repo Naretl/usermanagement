@@ -10,8 +10,10 @@ def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            UserProfile.objects.create(user=user)
+            user = form.save()  # Let the form handle password hashing and saving
+
+            # UserProfile will be created by the post_save signal
+
             login(request, user)
 
             # ✅ Simulated email verification
@@ -29,14 +31,16 @@ def register(request):
         form = RegistrationForm()
     return render(request, 'accounts/register.html', {'form': form})
 
+
 @login_required
 def profile(request):
-    profile = request.user.userprofile
+    profile, _ = UserProfile.objects.get_or_create(user=request.user)
     return render(request, 'accounts/profile.html', {'profile': profile})
+
 
 @login_required
 def edit_profile(request):
-    profile = request.user.userprofile
+    profile, _ = UserProfile.objects.get_or_create(user=request.user)
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -46,6 +50,8 @@ def edit_profile(request):
     else:
         form = ProfileForm(instance=profile)
     return render(request, 'accounts/edit_profile.html', {'form': form})
+
+
 
 
 
